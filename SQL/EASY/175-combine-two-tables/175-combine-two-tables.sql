@@ -1,4 +1,4 @@
--- code for the SQL problem "Combine Two Tables" with excution speed of 319ms
+-- code for the SQL problem "Combine Two Tables" 
 
 SELECT Person.firstName,Person.lastName,Address.city,Address.state
 FROM Person 

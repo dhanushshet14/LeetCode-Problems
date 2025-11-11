@@ -1,4 +1,4 @@
--- code for the SQL problem "SECOND HIGHEST SALARY" with excution speed of 319ms
+-- code for the SQL problem "SECOND HIGHEST SALARY" 
 
 SELECT IFNULL((
     SELECT DISTINCT salary
