@@ -1,49 +1,50 @@
-# 595. big countires
+# 595. Big Countries
 
+Table: World
 
 +-------------+---------+
 | Column Name | Type    |
 +-------------+---------+
-| student     | varchar |
-| class       | varchar |
+| name        | varchar |
+| continent   | varchar |
+| area        | int     |
+| population  | int     |
+| gdp         | bigint  |
 +-------------+---------+
-(student, class) is the primary key (combination of columns with unique values) for this table.
-Each row of this table indicates the name of a student and the class in which they are enrolled.
- 
+name is the primary key (column with unique values) for this table.
+Each row of this table gives information about the name of a country, the continent to which it belongs, its area, the population, and its GDP value.
 
-Write a solution to find all the classes that have at least five students.
+A country is big if:
+- it has an area of at least 3 million (i.e., 3000000 km2), or
+- it has a population of at least 25 million (i.e., 25000000).
+
+Write a solution to find the name, population, and area of the big countries.
 
 Return the result table in any order.
 
 The result format is in the following example.
 
- 
+## Example 1:
 
-Example 1:
+**Input:** 
+World table:
++-------------+-----------+---------+------------+--------------+
+| name        | continent | area    | population | gdp          |
++-------------+-----------+---------+------------+--------------+
+| Afghanistan | Asia      | 652230  | 25500100   | 20343000000  |
+| Albania     | Europe    | 28748   | 2831741    | 12960000000  |
+| Algeria     | Africa    | 2381741 | 37100000   | 188681000000 |
+| Andorra     | Europe    | 468     | 78115      | 3712000000   |
+| Angola      | Africa    | 1246700 | 20609294   | 100990000000 |
++-------------+-----------+---------+------------+--------------+
 
-Input: 
-Courses table:
-+---------+----------+
-| student | class    |
-+---------+----------+
-| A       | Math     |
-| B       | English  |
-| C       | Math     |
-| D       | Biology  |
-| E       | Math     |
-| F       | Computer |
-| G       | Math     |
-| H       | Math     |
-| I       | Math     |
-+---------+----------+
-Output: 
-+---------+
-| class   |
-+---------+
-| Math    |
-+---------+
-Explanation: 
-- Math has 6 students, so we include it.
-- English has 1 student, so we do not include it.
-- Biology has 1 student, so we do not include it.
-- Computer has 1 student, so we do not include it.
+**Output:** 
++-------------+------------+---------+
+| name        | population | area    |
++-------------+------------+---------+
+| Afghanistan | 25500100   | 652230  |
+| Algeria     | 37100000   | 2381741 |
++-------------+------------+---------+
+
+**Explanation:** 
+Afghanistan and Algeria are big countries because they have an area of at least 3 million km2 or a population of at least 25 million.

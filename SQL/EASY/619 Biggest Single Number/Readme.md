@@ -1,5 +1,7 @@
 # 619. Biggest Single Number
 
+Table: MyNumbers
+
 +-------------+------+
 | Column Name | Type |
 +-------------+------+
@@ -7,7 +9,6 @@
 +-------------+------+
 This table may contain duplicates (In other words, there is no primary key for this table in SQL).
 Each row of this table contains an integer.
- 
 
 A single number is a number that appeared only once in the MyNumbers table.
 
@@ -15,11 +16,9 @@ Find the largest single number. If there is no single number, report null.
 
 The result format is in the following example.
 
- 
+## Example 1:
 
-Example 1:
-
-Input: 
+**Input:** 
 MyNumbers table:
 +-----+
 | num |
@@ -33,17 +32,20 @@ MyNumbers table:
 | 5   |
 | 6   |
 +-----+
-Output: 
+
+**Output:** 
 +-----+
 | num |
 +-----+
 | 6   |
 +-----+
-Explanation: The single numbers are 1, 4, 5, and 6.
-Since 6 is the largest single number, we return it.
-Example 2:
 
-Input: 
+**Explanation:** The single numbers are 1, 4, 5, and 6.
+Since 6 is the largest single number, we return it.
+
+## Example 2:
+
+**Input:** 
 MyNumbers table:
 +-----+
 | num |
@@ -56,10 +58,12 @@ MyNumbers table:
 | 3   |
 | 3   |
 +-----+
-Output: 
+
+**Output:** 
 +------+
 | num  |
 +------+
 | null |
 +------+
-Explanation: There are no single numbers in the input table so we return null.
+
+**Explanation:** There are no single numbers in the input table so we return null.
